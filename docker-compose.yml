@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: dq-only-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB:-myagent_dq}
+      - POSTGRES_USER=${POSTGRES_USER:-myagent}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-myagent123}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./data/postgres/init:/docker-entrypoint-initdb.d:ro
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
