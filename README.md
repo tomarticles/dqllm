@@ -1,6 +1,5 @@
 # Data Quality with LLM
 
-This folder is a standalone version of the AI-assisted Data Quality module only.
 
 ## What is included
 
