@@ -1,4 +1,4 @@
-# Data Quality Only (FastAPI + PostgreSQL + Ollama)
+# Data Quality with LLM
 
 This folder is a standalone version of the AI-assisted Data Quality module only.
 
